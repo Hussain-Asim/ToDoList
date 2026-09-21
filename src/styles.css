@@ -1,3 +1,105 @@
 body {
     background-color: violet;
 }
+
+dialog {
+    width: 75%;
+    height: 75%;
+    border-radius: 10px;
+    border-color: white;
+
+}
+
+.inputTitle {
+    font-size: 1.9em;
+    border: none;
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 10px;
+    width: 32em;
+}
+
+.inputTitle:focus {
+    border-radius: 6px;
+}
+
+.textAreaDescription {
+    padding: 11px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    height: 130px;
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+.dueDateDiv {
+    padding: 10px;
+    margin-bottom: 6px;
+
+}
+
+.dueDateLabel {
+    font-size: 1.1em;
+}
+
+.dueDateInput {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.prioritiesDiv {
+    width: 9%;
+    padding: 10px;
+}
+
+.highPriorityDiv,
+.mediumPriorityDiv,
+.lowPriorityDiv {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.notesTextArea {
+
+    padding: 11px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    height: 500px;
+    width: 840px;
+    margin-bottom: 16px;
+}
+
+.priorityH3 {
+    margin-top: -7px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.blue-btn {
+    background-color: #2563eb;
+    color: white;
+}
+
+.blue-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.grey-btn {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.grey-btn:hover {
+    background-color: #d1d5db;
+}
