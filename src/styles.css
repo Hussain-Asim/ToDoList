@@ -89,6 +89,8 @@ dialog {
 .blue-btn {
     background-color: #2563eb;
     color: white;
+    transition: background-color 0.2s, transform 0.1s;
+
 }
 
 .blue-btn:hover {
@@ -98,8 +100,32 @@ dialog {
 .grey-btn {
     background-color: #e5e7eb;
     color: #374151;
+    transition: background-color 0.2s, transform 0.1s;
+
 }
 
 .grey-btn:hover {
     background-color: #d1d5db;
+}
+
+.addBtn {
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.addBtn:hover {
+    background-color: #172554;
+}
+
+
+.blue-btn:active,
+.addBtn:active {
+    transform: scale(0.97);
 }
