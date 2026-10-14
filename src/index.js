@@ -51,7 +51,7 @@ closeButton.addEventListener("click", () => {
 // userInputDiv.classList.add("userInputDiv");
 // dialog.appendChild(userInputDiv);
 
-const inputTitle = document.createElement("input")
+const inputTitle = document.createElement("input");
 inputTitle.type = "text";
 inputTitle.placeholder = "Title";
 inputTitle.classList.add("inputTitle")
@@ -132,12 +132,11 @@ dialog.appendChild(notesTextArea)
 function displayRadioValue() {
     var ele = document.getElementsByName('radio');
 
-    for (i = 0; i < ele.length; i++) {
+    for (let i = 0; i < ele.length; i++) {
         if (ele[i].checked)
-            console.log(ele[i].value);
+            return ele[i].value;
     }
 }
-
 
 //the problem is u want one compiled and want each one from it specifically.
 
@@ -164,20 +163,85 @@ class Todos {
 }
 
 // textAreaDescription, dueDateInput,  ,notesTextArea
-const todo = new Todos(inputTitle, textAreaDescription, dueDateInput, '', notesTextArea)
+const todo = new Todos(inputTitle, textAreaDescription, dueDateInput, displayRadioValue, notesTextArea)
 
+
+//DOM LOGIC
 const addBtn = document.querySelector(".addBtn")
+const tasksUI = document.querySelector(".tasksUI")
+
 addBtn.addEventListener("click", () => {
 
+    const todoDiv = document.createElement('div');
+    todoDiv.classList.add("todoDiv");
+    tasksUI.appendChild(todoDiv);
+
+    const radioUI = document.createElement('input');
+    radioUI.type = "radio"
+    radioUI.classList.add("radioUI");
+    todoDiv.appendChild(radioUI);
+
+    //div so that we can align
+    const todoTitleDateUIdiv = document.createElement('div')
+    todoTitleDateUIdiv.classList.add("todoTitleDateUIdiv")
+    todoDiv.appendChild(todoTitleDateUIdiv)
+
+    const todoTitle = document.createElement("h2");
+    todoTitle.classList.add("todoTitle");
+    todoTitle.textContent = todo.title.value;
+    todoTitleDateUIdiv.appendChild(todoTitle);
+
+    const todoDate = document.createElement("h3");
+    todoDate.classList.add("todoDate");
+    todoDate.textContent = todo.dueDate.value;
+    todoTitleDateUIdiv.appendChild(todoDate);
+
+
+    inputTitle.value = '';
+    dueDateInput.value = '';
+    dialog.close();
+
+    // const todoTitle=document.createElement('')
     // console.log(todo.title.value,);
     // console.log(todo.description.value);
     // console.log(todo.dueDate.value);
     // console.log(todo.priority.value);
-    console.log(displayRadioValue());
+    // console.log(todo.priority());
     // console.log(todo.notes.value);
+
+
 })
 
-//when click add, the selected checkbox should be shown on console.
+//when again click on add task, the inputTitle value should gone.
 
+//when click add, the selected radio box should be in the console.
 //all value should be in todo object
+
+//now its time for dom logic.
+
+//when click, title and date should be display at homepage.
+
+//div
+//div title
+//div date 
+// ......
+
+
+
+//Tasks should be stored in 'Default Project' page.
+
+const defaultProject = document.querySelector(".defaultProject")
+defaultProject.addEventListener("DOMContentLoaded", () => {
+    console.log('alo');
+})
+// const completedTodos = document.querySelector('.completedTodos')
+// completedTodos.addEventListener("click", () => {
+//     tasksUI.textContent = '';
+// })
+
+
+//When click `Completed Todos`, current page 
+
+//When I click radioUI, the item should be added in `Completed Todos`.
+//todoDiv should be delete in current page 
 

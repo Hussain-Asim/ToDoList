@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
 body {
     background-color: violet;
 }
@@ -128,4 +133,51 @@ dialog {
 .blue-btn:active,
 .addBtn:active {
     transform: scale(0.97);
+}
+
+.todoDiv {
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    display: grid;
+    grid-template-columns: 3em 30em;
+    align-items: center;
+}
+
+.todoDiv:hover {
+    border: 2px solid black;
+    cursor: pointer;
+
+}
+
+.todoTitle {
+    margin-bottom: 10px;
+
+}
+
+.container {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+
+}
+
+.sidebarUI {
+    /* border: 1px solid green; */
+    height: 100vh;
+    background-color: green;
+    padding: 30px;
+}
+
+.tasksUI {
+    padding: 30px;
+}
+
+.radioUI {
+    height: 1.6em;
+    width: 1.6em;
+    accent-color: #1d4ed8;
+
 }
