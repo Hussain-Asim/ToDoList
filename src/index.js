@@ -168,7 +168,23 @@ const todo = new Todos(inputTitle, textAreaDescription, dueDateInput, displayRad
 
 //DOM LOGIC
 const addBtn = document.querySelector(".addBtn")
-const tasksUI = document.querySelector(".tasksUI")
+// const tasksUI = document.querySelector(".tasksUI")
+
+// const todosUIDiv = document.createElement("div")
+// todosUIDiv.classList.add("todosUIDiv")
+const divContainer = document.querySelector(".container");
+const tasksUI = document.createElement("div");
+tasksUI.classList.add("tasksUI");
+
+
+const defaultProject = document.querySelector(".defaultProject")
+defaultProject.classList.add("defaultProject");
+
+window.addEventListener("load", (event) => {
+    console.log("page is fully loaded");
+    defaultProject.style.color = "blue";
+    divContainer.appendChild(tasksUI)
+});
 
 addBtn.addEventListener("click", () => {
 
@@ -230,14 +246,31 @@ addBtn.addEventListener("click", () => {
 
 //Tasks should be stored in 'Default Project' page.
 
-const defaultProject = document.querySelector(".defaultProject")
-defaultProject.addEventListener("DOMContentLoaded", () => {
-    console.log('alo');
-})
-// const completedTodos = document.querySelector('.completedTodos')
-// completedTodos.addEventListener("click", () => {
-//     tasksUI.textContent = '';
-// })
+
+// When a user first opens the app, there should be some sort of ‘default’ project to which all of their todos are put
+
+// first default project should be selected with hovering color
+
+// then div should be attached
+//transfer todoDiv to tasksUI 
+
+//transfer btn to sidebar
+
+//
+
+
+
+
+//we store todo in div
+//we change tab, store in defaultProject and then empty current page and replace with next page requirement.
+
+//click radiobtn, selected todoDiv should be added to Completed Todos,
+//click radioBtn, 
+
+//  and removes the current ones. 
+
+// const completedTodos= document.querySelector(".completedTodos")
+// completedTodos
 
 
 //When click `Completed Todos`, current page 
