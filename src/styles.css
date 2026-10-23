@@ -113,7 +113,7 @@ dialog {
     background-color: #d1d5db;
 }
 
-.addBtn {
+.dialogAddBtn {
     background-color: #1e3a8a;
     color: white;
     border: none;
@@ -125,13 +125,13 @@ dialog {
     transition: background-color 0.2s, transform 0.1s;
 }
 
-.addBtn:hover {
+.dialogAddBtn:hover {
     background-color: #172554;
 }
 
 
 .blue-btn:active,
-.addBtn:active {
+.dialogAddBtn:active {
     transform: scale(0.97);
 }
 
@@ -171,7 +171,7 @@ dialog {
     padding: 30px;
 }
 
-.tasksUI {
+.mainUI {
     padding: 30px;
 }
 
